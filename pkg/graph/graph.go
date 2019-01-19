@@ -5,7 +5,18 @@ package graph
  */
 type Vertex struct {
 	val interface{}
-	edges []*Vertex
+	edges []*Edge
 }
+
+/**
+	Edge structure 
+	
+**/
+type Edge struct {
+	v *Vertex
+	weight int
+}
+
+type Path []*Edge
 
 type Graph *Vertex

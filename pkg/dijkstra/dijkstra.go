@@ -14,9 +14,9 @@ import (
 	4. Index position in the heap
 **/
 type DVertex struct {
-	v *Vertex
+	v *graph.Vertex
 	dist int
-	prev *Edge
+	prev *graph.Edge
 	index int
 }
 
@@ -31,6 +31,12 @@ type DVertex struct {
 	and distances/previous vertices on path are updated
 	if applicable
 **/
-func (g *Graph) Dijkstra() ([]Path, error) {
+func Dijkstra(g *graph.Graph) ([]*graph.Path, error) {
+	paths := make([]*graph.Path, 0, 0)
+	newPath := make(graph.Path, 0)
 
+//	newPath = append(newPath, g.V.Edges[0])
+	paths = append(paths, &newPath)
+	log.Println("DIJKSTRA(): path ", paths)
+	return paths, nil
 } 

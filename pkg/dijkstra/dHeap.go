@@ -1,7 +1,6 @@
 package dijkstra
 
 import (
-	"log"
 	"container/heap"
 )
 
